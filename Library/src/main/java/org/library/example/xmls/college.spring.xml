@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    
+    <context:component-scan base-package="org.library.example" />
+    <context:annotation-config />
+    
+    <bean id="stu1" class="org.library.example.beans.StudentImpl">
+        <property name="rollNo" value="12012" />
+        <property name="name" value="king" />
+        <property name="mark" value="56.56" />
+        <property name="address" value="bangalore" />
+    </bean>
+     <bean id="stu2" class="org.library.example.beans.StudentImpl">
+        <property name="rollNo" value="12568" />
+        <property name="name" value="Queen" />
+        <property name="mark" value="78.56" />
+        <property name="address" value="Delhi" />
+    </bean>
+     <bean id="stu3" class="org.library.example.beans.StudentImpl">
+        <property name="rollNo" value="78925" />
+        <property name="name" value="Prince" />
+        <property name="mark" value="48.56" />
+        <property name="address" value="Hydrabad" />
+    </bean>
+    
+    <bean id="lib1" class="org.library.example.beans.LibreryImpl">
+        <property name="id" value="456" />
+        <property name="name" value="ABC" />
+        <property name="type" value="GOVT" />
+        <property name="capacity" value="45321234254" />
+        <property name="no_Of_Books" value="23213542" />
+    </bean>
+    <bean id="lib2" class="org.library.example.beans.LibreryImpl">
+        <property name="id" value="852" />
+        <property name="name" value="DEF" />
+        <property name="type" value="PVT" />
+        <property name="capacity" value="3214546459" />
+        <property name="no_Of_Books" value="1834657279" />
+    </bean>
+    <bean id="lib3" class="org.library.example.beans.LibreryImpl">
+        <property name="id" value="951" />
+        <property name="name" value="XYZ" />
+        <property name="type" value="PVT" />
+        <property name="capacity" value="46829713" />
+        <property name="no_Of_Books" value="284655555" />
+    </bean>
+    <bean id="col1" class="org.library.example.beans.CollegeImpl">
+         <property name="colId" value="111" />
+         <property name="colName" value="GEC" />
+         <property name="colAddress" value="Bhubaneswar" />
+    </bean>
+    </beans>
