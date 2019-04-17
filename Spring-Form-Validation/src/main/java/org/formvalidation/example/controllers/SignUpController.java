@@ -50,6 +50,7 @@ public class SignUpController
 			   Transaction t=s.beginTransaction();
 			   sgnup_logger.info("transaction created and started");
 			   
+			   
 			   s.save(signup);
 			   t.commit();
 			   sgnup_logger.info("data inserted successfully");
