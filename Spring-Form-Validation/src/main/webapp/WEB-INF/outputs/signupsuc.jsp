@@ -8,9 +8,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-   <h2>sign up successful</h2>
+   <h2>sign up <span style="color: green;">successful</span></h2>
      <h4>ur details has been saved as follows : </h4>
        ur name : ${signup.name}<br>
+       ur date of birth : ${signup.dob}<br>
        ur marks : ${signup.marks}<br>
        ur Address : ${signup.address}<br>
        ur password : ${signup.password}<br>

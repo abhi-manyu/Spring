@@ -1,5 +1,8 @@
 package org.formvalidation.example.controllers;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
@@ -8,10 +11,13 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.AnnotationConfiguration;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -28,6 +34,15 @@ public class SignUpController
 	   mod.addAttribute("signup",new Signup());
 	   return "signup";
    }
+   
+   
+   @InitBinder
+   public void initBinder(WebDataBinder webDataBinder) {
+   SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+   dateFormat.setLenient(false);
+   webDataBinder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));
+   }
+   
    
    @PostMapping("/doSignUp")
    public String doSignUpHere(@Valid @ModelAttribute("signup") Signup signup,
@@ -53,6 +68,7 @@ public class SignUpController
 			   
 			   s.save(signup);
 			   t.commit();
+			   System.out.println(signup.getDob());
 			   sgnup_logger.info("data inserted successfully");
 		       //mod.addAttribute("sp", sp);
 			   sgnup_logger.info("-----------------------------------------------------");
