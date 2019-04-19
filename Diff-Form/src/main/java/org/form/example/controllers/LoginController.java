@@ -31,7 +31,8 @@ public class LoginController
   }
   
   @PostMapping(value="/login")
-  public String logIn(@Valid @ModelAttribute("login")Login login, BindingResult result)
+  public String logIn(@Valid @ModelAttribute("login")Login login, 
+		  BindingResult result, Model mod)
   {
 	  System.out.println("method hited");
 	  lginlogger.info("logging in attempted");
@@ -50,6 +51,7 @@ public class LoginController
 		  Session s=sf.openSession();
 		  lginlogger.info("all credentials are well formed and validated");
 		  List<Student> lists=s.createQuery("from Student").list();
+		  System.out.println("the whole list size is : "+lists.size());
 		  if(lists.size()!=0)
 		  {
 			  lginlogger.info("datas fetched from databased , now checking if ur record is there or not");
@@ -62,11 +64,13 @@ public class LoginController
 					  lginlogger.info("--------------------------------------------------------------------------------");
 					  return "loginsuc";
 				  }
-				  System.out.println("login failed");
-				  lginlogger.error("data is present but due to password mispatch log in failed, redirecting to login page");
-				  lginlogger.info("-------------------------------------------------------------------------------------");
-				  return "login";
 			  }
+			  System.out.println("login failed");
+			  lginlogger.error("data is present but due to password mispatch log in failed, redirecting to login page");
+			  lginlogger.info("-------------------------------------------------------------------------------------");
+			  String msg="ur user name not found , u may need to register first";
+			  mod.addAttribute("error",msg);
+			  return "login";
 		  }
 		  System.out.println("database is empty, u need to register first");
 		  lginlogger.info("register some student first, then u can log in");
