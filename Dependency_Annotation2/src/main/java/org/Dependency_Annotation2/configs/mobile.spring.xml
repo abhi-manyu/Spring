@@ -10,16 +10,22 @@
     <context:component-scan base-package="org.Dependency_Annotation2" />
     <context:annotation-config />
     
-
-  <bean id="mob1" class="org.Dependency_Annotation2.beans.Mobile">
-      <property name="mobname" value="redmi note 5 pro" />
+<bean id="s1" class="org.Dependency_Annotation2.beans.Sim">
+      <constructor-arg value="Jio" />
   </bean>
   
-  <bean id="s1" class="org.Dependency_Annotation2.beans.Sim">
-      <property name="simname" value="Jio" />
+  <bean id="s2" class="org.Dependency_Annotation2.beans.Sim" >
+    <constructor-arg value="airtel" />
   </bean>
-  <bean id="s2" class="org.Dependency_Annotation2.beans.Sim">
-      <property name="simname" value="Airtel" />
+  
+  <bean id="p" class="org.Dependency_Annotation2.beans.Processor" >
+	<property name="procName" value="snapdragon"></property>
   </bean>
+  
+  <bean id="mob1" class="org.Dependency_Annotation2.beans.Mobile">
+   <property name="mobname" value="Redmi"></property>
+  </bean>
+  
+  
 
 </beans>

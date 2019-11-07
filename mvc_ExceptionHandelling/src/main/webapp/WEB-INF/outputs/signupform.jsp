@@ -9,11 +9,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <form:form action="./dosignup" method="post" modelAttribute="usersign">
+    <form:form method="post" action="./dosignup" modelAttribute="signup">
           enter ur unique id : <form:input path="id"/><form:errors path="id" /><br>
           enter ur name : <form:input path="name"/><form:errors path="name" /><br>
           enter ur address : <form:input path="address" /><form:errors path="address" /><br>
           <input type="submit" value="Sign up" />
     </form:form>
+    
+    <%-- <form:form action="./dosignup" method="post">
+    
+    </form:form> --%>
+    
 </body>
 </html>

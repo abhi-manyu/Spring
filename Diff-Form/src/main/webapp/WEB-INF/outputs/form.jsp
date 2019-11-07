@@ -81,12 +81,8 @@
           <tr>
              <td></td>
              <td>
-                 <input type="submit" value="save" />
                  <input type="reset" value="clear" />
-             </td>
-             <td>
-                 <a href="./loginform">no i m existing user</a><br>
-                 <a href="./disform">i forgot my password</a>
+                  <input type="submit" value="save" />
              </td>
           </tr>
       </table>

@@ -1,9 +1,21 @@
 package org.form.testing.beans;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class Address
 {
+	
    private int flatNo;
+	
+	@NotEmpty
+	@NotBlank
    private String pgName;
+	
+	@NotEmpty
+	@NotBlank
    private String layout;
    
    public Address() {

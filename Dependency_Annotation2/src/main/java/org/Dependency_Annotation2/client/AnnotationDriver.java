@@ -8,10 +8,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class AnnotationDriver
 {
    public static void main(String[] args) {
-	ApplicationContext ap=
+	ApplicationContext ap =
 			new AnnotationConfigApplicationContext(MobileConfigurer.class);
-	Mobile mob=ap.getBean(Mobile.class);
+	Mobile mob = ap.getBean(Mobile.class);
 	mob.Calling();
 	mob.sendSms();
+	mob.showSpecs();
 }
 }

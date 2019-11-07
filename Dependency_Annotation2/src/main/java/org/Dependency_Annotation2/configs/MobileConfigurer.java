@@ -10,22 +10,22 @@ import org.springframework.context.annotation.Configuration;
 public class MobileConfigurer
 {
     @Bean
-    public Mobile mobile()
+    public Mobile getMobileObject()
     {
-    	Mobile mob=new Mobile(sim());
+    	Mobile mob=new Mobile(getSimObject());
     	mob.setMobname("Redmi Note 5 pro");
-    	mob.setPros(processor());
+    	mob.setPros(getProcessorObject());
     	return mob;
     }
     
     @Bean
-    public Sim sim()
+    public Sim getSimObject()
     {
     	return new Sim("Jio");
     }
     
     @Bean
-    public Processor processor()
+    public Processor getProcessorObject()
     {
     	Processor ps= new Processor();
     	ps.setProcName("SnapDragon 845");

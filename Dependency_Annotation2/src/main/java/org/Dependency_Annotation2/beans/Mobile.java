@@ -26,10 +26,14 @@ public class Mobile
    
    public void Calling()
    {
-	   sim.call("8095113494");
+	   sim.call(8);
    }
    public void sendSms()
    {
-	   sim.sendSms("8095113494");
+	   sim.sendSms(80);
+   }
+   public void showSpecs()
+   {
+	  System.out.println(pros.getProcName());
    }
 }

@@ -3,25 +3,21 @@ package org.MVC.form.beans;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class StudentController
-{
+public class StudentController {
 
-   @GetMapping(value = "/student")
+   @RequestMapping(value = "/student", method = RequestMethod.GET)
    public String student(Model mod)
    {
-	   System.out.println("method hitted");
 	   mod.addAttribute("studentadd",new Student());
       return "student";
    }
    
-   @PostMapping(value = "/addStudent")
+   @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
    public String addStudent(@ModelAttribute("studentadd")Student studentadd, 
    ModelMap model)
    {

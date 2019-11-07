@@ -63,8 +63,6 @@ public class StudentController
 		  {
 			  s.save(stu);
 			  t.commit();
-			  s.close();
-			  sf.close();
 			  System.out.println("sucessfully saved, returning to the welcome page");
 			  logger.info("data inserted successfully into database, returning to the welcome page");
 			  logger.info("-----------------------------------------------------------------------");

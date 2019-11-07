@@ -1,9 +1,19 @@
 package org.form.testing.beans;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class User
 {
+	@NotEmpty
+	@NotBlank
 	private String name;
+	
+	@NotNull
 	private Address add;
+	
 	public User() {
 		// TODO Auto-generated constructor stub
 	}

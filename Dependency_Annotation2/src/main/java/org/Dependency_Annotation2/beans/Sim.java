@@ -8,16 +8,21 @@ public class Sim
     	this.simname=name;
 		System.out.println("sim object created");
 	}
+	
     
     
     public String getSimname() {
 		return simname;
 	}
-    public void call(String number)
+    public void setSimname(String simname) {
+		this.simname = simname;
+	}
+    
+	public void call(int number)
     {
     	System.out.println("call connected to : "+number+" by "+simname);
     }
-    public void sendSms(String number)
+    public void sendSms(int number)
     {
     	System.out.println("message has been sent to : "+number+" by "+simname);
     }

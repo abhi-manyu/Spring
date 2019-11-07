@@ -10,4 +10,9 @@ public class Engine {
 	public String getEngname() {
 		return engname;
 	}
+	
+	public void callEngine()
+	{
+		System.out.println("engine called");
+	}
 }

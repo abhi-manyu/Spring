@@ -9,6 +9,6 @@
 </head>
 <body>
     <h2>following exception occured</h2>
-     ${nullsms}
+     ${nul}
 </body>
 </html>

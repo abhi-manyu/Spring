@@ -19,5 +19,7 @@
      <property name="engname" value="Audi---2015" />
   </bean>
   
-  <bean id="c1" class="beans.Car" />
+  <bean id="c1" class="beans.Car" >
+     
+  </bean>
 </beans>

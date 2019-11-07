@@ -1,4 +1,4 @@
-package org.Dependency_Annotation2.client;
+/*package org.Dependency_Annotation2.client;
 
 import org.Dependency_Annotation2.beans.Mobile;
 import org.springframework.context.ApplicationContext;
@@ -12,5 +12,7 @@ public class Driver
 		Mobile mob=(Mobile)ap.getBean("mob1");
 		mob.Calling();
 		mob.sendSms();
+		mob.pro();
 	}
 }
+*/

@@ -1,15 +1,16 @@
 package org.exception.example.beans;
 
-import javax.validation.constraints.Min;
-
 import org.hibernate.validator.constraints.NotEmpty;
 
 public class UserSignup
 {
    private int id;
+   
 	@NotEmpty(message="can not be empty")
    private String name;
+	
    private String address;
+   
    public UserSignup() {
 	// TODO Auto-generated constructor stub
     }
