@@ -26,11 +26,11 @@ public class Mobile
    
    public void Calling()
    {
-	   sim.call(8);
+	   sim.call("8095113494");
    }
    public void sendSms()
    {
-	   sim.sendSms(80);
+	   sim.sendSms("8095113494");
    }
    public void showSpecs()
    {

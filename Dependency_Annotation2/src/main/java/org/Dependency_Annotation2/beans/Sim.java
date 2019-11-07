@@ -10,7 +10,6 @@ public class Sim
 	}
 	
     
-    
     public String getSimname() {
 		return simname;
 	}
@@ -18,11 +17,11 @@ public class Sim
 		this.simname = simname;
 	}
     
-	public void call(int number)
+	public void call(String number)
     {
     	System.out.println("call connected to : "+number+" by "+simname);
     }
-    public void sendSms(int number)
+    public void sendSms(String number)
     {
     	System.out.println("message has been sent to : "+number+" by "+simname);
     }
