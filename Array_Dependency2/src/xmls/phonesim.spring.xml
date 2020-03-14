@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+   <bean id="si1" class="pojo.Sim">
+     <property name="sim_name" value="Airtel"/>
+     <property name="sim_woner" value="Anirudha"/>
+   </bean>
+   <bean id="si2" class="pojo.Sim">
+     <property name="sim_name" value="vodafone"/>
+     <property name="sim_woner" value="Abhimanyu"/>
+   </bean>
+   <bean id="si3" class="pojo.Sim">
+     <property name="sim_name" value="jio"/>
+     <property name="sim_woner" value="Arabinda"/>
+   </bean>
+   <bean id="mo" class="pojo.Mobile">
+   <property name="mobile_id" value="13215"/>
+   <property name="mobile_name">
+     <list>
+        <value>redmi note 5 pro</value>
+        <value> samsung galaxy s9+</value>
+        <value> one plus 6</value>
+     </list></property>
+   <property name="mobile_cost" value="15000"/>
+   <property name="sim">
+       <list>
+            <ref bean="si1"/>
+            <ref bean="si2"/>
+            <ref bean="si3"/>
+       </list></property>
+  </bean>
+
+</beans>
