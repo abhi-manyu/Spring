@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="b1" class="pojo.Books" autowire-candidate="false">
+       <property name="name" value="java" />
+    </bean>
+    <bean id="b2" class="pojo.Books">
+       <property name="name" value="spring" />
+    </bean>
+    <!-- <bean id="book" class="pojo.Books">
+       <property name="name" value="Spring" />
+    </bean>
+    <bean id="s1" class="pojo.Student" autowire="byName">
+        <property name="name" value="abhi" />
+    </bean> -->
+    
+    <bean id="s1" class="pojo.Student" autowire="constructor">
+       <constructor-arg value="Abhimanyu" index="0" />
+    </bean>
+</beans>
