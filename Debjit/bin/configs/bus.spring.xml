@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+   <bean id="en1" class="beans.Engine">
+       <property name="modelyear" value="2010" />
+   </bean>
+   <bean id="en2" class="beans.Engine" autowire-candidate="false">
+       <property name="modelyear" value="2019" />
+   </bean>
+   
+   <bean id="b1" class="beans.Bus" autowire="constructor" />
+</beans>
