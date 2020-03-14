@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+      <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+     <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+     <bean id="eng1" class="pojos.Engine" autowire-candidate="true">
+          <property name="model_year" value="2006" />
+          <property name="price" value="355000000" />
+     </bean>
+     <bean id="eng2" class="pojos.Engine" autowire-candidate="false">
+          <property name="model_year" value="2015" />
+          <property name="price" value="89300000" />
+     </bean>
+     <bean id="car1" class="pojos.Car" />
+       <!--    <property name="car_name" value="Range Rover" />
+          <property name="eng" ref="eng1" />
+     </bean> -->
+</beans>
