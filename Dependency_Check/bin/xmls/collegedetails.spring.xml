@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+     <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+      
+     <bean id="co1" class="pojo.College">
+         <property name="no_of_student" value="900" />
+         <property name="college_name" value="Gandhi Engineering Colllege" />
+         <property name="uni">
+              <ref bean="un1" />
+         </property>
+     </bean>
+     <bean id="un1" class="pojo.University">
+          <property name="university_name" value="BPUT" />
+          <property name="est_date" value="03/09/1995" />
+     </bean>
+</beans>
