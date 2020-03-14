@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+    
+    <bean id="e1" class="pojo.Engine">
+       <property name="modelyear"  value="2015" />
+    </bean>
+    
+    <bean id="e2" class="pojo.Engine">
+       <property name="modelyear"  value="2018" />
+    </bean>
+    
+     <bean id="c1" class="pojo.Car">
+       
+     </bean>
+
+</beans>
