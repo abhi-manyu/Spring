@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="mob" class="pojo_class.Mobile">
+    <property name="phone_name" value="samsung galaxy s9+" />
+    <property name="phone_cost" value="60000"/>
+    
+    <!-- <property name="sim">
+        <bean id="si1" class="pojo_class.Sim">
+        <property name="sim_name" value="Jio" />
+        <property name="main_bal" value="65.50" />
+        </bean>
+    </property>
+    here the property sim in phone class is hard coded with jio sim 
+    which is not at all a good practice. if we want then we can
+    provide any dynamic sim name by following manner -->
+    
+    <property name="sim" ref="si2"/>
+    </bean>
+    
+    <bean id="si1" class="pojo_class.Sim">
+        <property name="sim_name" value="Airtel"/>
+        <property name="main_bal" value="96.45" />
+    </bean>
+    <bean id="si2" class="pojo_class.Sim">
+        <property name="sim_name" value="Vodafone"/>
+        <property name="main_bal" value="16.32" />
+    </bean>
+</beans>

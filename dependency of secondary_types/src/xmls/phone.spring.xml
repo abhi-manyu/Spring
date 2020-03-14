@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+   <bean id="ph" class="pojo_class.Mobile" scope="prototype">
+       <property name="phone_name" value="redmi note 5 pro" />
+       <property name="phone_cost"  value="15000" />
+       <property name="sim" ref="si" />
+   </bean>
+
+</beans>
