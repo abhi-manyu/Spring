@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+   <bean id="m" class="pojo.Mobile" autowire="byType">
+       <property name="ph_name" value="Redmi note 5 pro" />
+       <property name="cost" value="15000"></property>
+       <!-- <property name="sim" ref="a" /> -->
+   </bean>
+   <bean id="a" class="pojo.Airtel" autowire-candidate="true">
+      <constructor-arg value="Airtel" index="0" />
+      <constructor-arg value="Abhimanyu" index="1" />
+   </bean>
+   <bean id="v" class="pojo.Vodafone" autowire-candidate="false">
+      <constructor-arg value="Vodafone" index="0" />
+      <constructor-arg value="Arabinda" index="1" />
+   </bean>
+</beans>

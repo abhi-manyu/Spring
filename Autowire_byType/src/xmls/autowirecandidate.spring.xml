@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+     <bean id="a" class="pojo.Airtel" autowire-candidate="false">
+        <constructor-arg value="Airtel" />
+        <constructor-arg value="Abhimanyu" />
+     </bean>
+     <bean id="v" class="pojo.Vodafone">
+        <constructor-arg value="Vodafone" />
+        <constructor-arg value="Arabinda" />
+     </bean>
+     <bean id="m1" class="pojo.Mobile" autowire="byType">
+         <property name="ph_name" value="samsung galaxy s9+" />
+         <property name="cost" value="56000" />
+     </bean>
+</beans>
