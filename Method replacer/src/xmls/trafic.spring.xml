@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+  <bean id="ni" class="pojo.New_Implementation" />
+  <bean id="c" class="pojo.Car">
+     <replaced-method name="obeyTraficrules" replacer="ni" />
+  </bean>
+
+</beans>
