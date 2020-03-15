@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+   <bean id="u1" class="pojo.Users2">
+       <constructor-arg value="01" index="0" />
+       <constructor-arg value="Abhimanyu" index="1" />
+   </bean>
+   <bean id="u2" class="pojo.Users2">
+       <constructor-arg value="02" index="0" />
+       <constructor-arg value="Arabinda" index="1" />
+   </bean>
+   <bean id="u3" class="pojo.Users2">
+       <constructor-arg value="03" index="0" />
+       <constructor-arg value="Anirudha" index="1" />
+   </bean>
+   <bean id="u4" class="pojo.Users2">
+       <constructor-arg value="04" index="0" />
+       <constructor-arg value="Ashok" index="1" />
+   </bean>
+   <bean id="u5" class="pojo.Users2">
+       <constructor-arg value="05" index="0" />
+       <constructor-arg value="charulata" index="1" />
+   </bean>
+   <bean id="a1" class="pojo.Answer2">
+       <constructor-arg value="java is a programming language" index="0" />
+       <constructor-arg index="1">
+          <set>
+              <ref bean="u1"/>
+              <ref bean="u2"/>
+              <ref bean="u5"/>
+          </set>
+       </constructor-arg>
+   </bean>
+   <bean id="a2" class="pojo.Answer2">
+       <constructor-arg value="java is an island" index="0" />
+       <constructor-arg>
+          <set>
+              <ref bean="u3"/>
+              <ref bean="u4"/>
+          </set>
+       </constructor-arg>
+   </bean>
+   <bean id="qs1" class="pojo.Question2">
+       <constructor-arg value="01" index="0" />
+       <constructor-arg value="what is java ? " index="1" />
+       <constructor-arg index="2">
+           <map>
+               <entry key="23/07/2018" value-ref="a1" />
+               <entry key="20/07/2018" value-ref="a2" />
+           </map>
+       </constructor-arg>
+   </bean>
+   
+</beans>
