@@ -1,0 +1,15 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+     <bean id="stu" class="pojo_class.Student" dependency-check="simple">
+         <property name="id" value="4545" />
+         <property name="name">
+             <value>Abhimanyu</value>
+         </property>
+         <property name="ph_no" value="4353553023"/>
+         <property name="mail">
+            <value>abhi@gmail.com</value></property>
+    </bean>
+</beans>
