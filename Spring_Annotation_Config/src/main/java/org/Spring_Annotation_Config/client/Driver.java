@@ -29,6 +29,7 @@ public class Driver
 				new AnnotationConfigApplicationContext(UserConfigurer.class);
 		User u1=ap.getBean(User.class);
 		u1.userDisplay();
+		System.out.println("hi");
 		
 	}
 }
