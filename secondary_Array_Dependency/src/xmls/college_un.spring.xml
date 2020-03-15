@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="co" class="pojo.College">
+       <property name="col_name" value="Gandhi Enginnering College"/>
+    </bean>   
+    <bean id="un" class="pojo.University">
+      <property name="uni_id" value="123"/>
+      <property name="uni_name" value="BPUT" />
+      <property name="col">
+         <ref bean="co"/>
+      </property>
+   </bean>
+</beans>
