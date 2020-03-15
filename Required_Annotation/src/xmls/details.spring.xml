@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+    
+    <bean id="stu1" class="pojos.Student">
+    
+        <!-- <property name="roll_no" value="467832" /> 
+        here exception will come cuz @Required annotation is used,
+        so we must need to provide the roll nomber value but here i m commenting 
+        the value giving line to the setter method -->
+        
+        <property name="name" value="Abhimanyu" />
+        <property name="phno" value="8095113494" />
+        <property name="address" value="Bangalore" />
+        <property name="marks" value="89" />
+    </bean>
+</beans>
