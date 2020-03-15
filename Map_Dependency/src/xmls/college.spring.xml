@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+  <bean id="c1" class="pojo.College">
+       <property name="collge_name" value="Gandhi Engineering College" />
+       <property name="no_of_student" value="600"  />
+       <property name="hod">
+          <map>
+             <entry key="ECE" value="Abhimanyu" />
+             <entry key="MECH" value="Anirudha" />
+             <entry key="Civil" value="Arabinda" />
+             <entry key="CSE" value="Charulata" />
+            
+          </map></property>
+  </bean>
+</beans>
