@@ -1,0 +1,17 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+     <bean id="hn" class="classes.Helloname" scope="singleton">
+      
+       <!-- <property name="gender" value="Mr" />
+       <property name="name" value="Abhimanyu" /> 
+       
+       here no overridding means for one setter method one value can
+       be assigned at a time or else we will get parser exception -->
+       
+       
+       <property name="gender" value="mrs"/>
+       <property name="name" value="sumitra rani"/>
+     </bean>
+</beans>
