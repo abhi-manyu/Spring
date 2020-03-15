@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="a" class="pojo.Airtel">
+      <property name="sim_name" value="Airtel" />
+    </bean>
+    <bean id="v" class="pojo.Vodafone">
+      <property name="sim_name" value="Vodafone" />
+    </bean>
+    <bean id="p1" class="pojo.Phone">
+    <property name="phone_name" value="reminote 5 pro" />
+    <property name="tonummber" value="8095113494" />
+    <property name="sendingsms" value="hii abhi ,, how are u ??" />
+    <property name="sim" ref ="v" />
+    </bean>
+
+</beans>
