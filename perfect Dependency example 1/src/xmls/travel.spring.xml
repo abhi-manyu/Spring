@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+   <bean id="c" class="pojo.Car">
+      <property name="no_of_seat" value="8"/>
+      <property name="company" value="Mercedes" />
+      <property name="speed" value="60" />
+   </bean>
+   <bean id="b" class="pojo.Bus">
+      <property name="no_of_seat" value="35" />
+      <property name="company" value="Volvo" />
+      <property name="speed" value="65" />
+      <property name="route_from" value="Bhubaneswar" />
+      <property name="route_to" value="Bhadrak" />
+   </bean>
+   <bean id="t" class="pojo.Traveler">
+      <property name="taveler_age" value="22" />
+      <property name="traveler_name" value="Abhimanyu" />
+      <property name="vei">
+         <ref bean="b"/></property>
+   </bean>
+   
+</beans>
