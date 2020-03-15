@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+    
+    <bean id="m1" class="pojo.Mark">
+        <property name="mark_scored" value="80" />
+    </bean>
+    <bean id="m2" class="pojo.Mark">
+        <property name="mark_scored" value="90" />
+    </bean>
+    <bean id="m3" class="pojo.Mark">
+        <property name="mark_scored" value="95" />
+    </bean>
+    <bean id="sub1" class="pojo.Subject">
+        <property name="sub_name" value="J2EE" />
+    </bean>
+    <bean id="sub2" class="pojo.Subject">
+        <property name="sub_name" value="J2SE" />
+    </bean>
+    <bean id="sub3" class="pojo.Subject">
+        <property name="sub_name" value="Spring/Hibernate" />
+    </bean>
+    <bean id="stu1" class="pojo.Student">
+    <property name="roll_no" value="46987" />
+        <property name="student_name" value="Abhimanyu" />
+        <property name="student_address" value="Bangalore" />
+        <property name="student_phone_no" value="8095113494" />
+        <property name="mark">
+            <map>
+                <entry key-ref="sub1" value-ref="m1" />
+                <entry key-ref="sub2" value-ref="m2" />
+                <entry key-ref="sub3" value-ref="m3" />
+            </map>
+        </property>
+    </bean>
+</beans>
