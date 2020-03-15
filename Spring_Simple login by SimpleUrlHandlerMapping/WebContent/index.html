@@ -1,0 +1,39 @@
+<html>
+<head>
+<style>
+   input {
+	padding: 5px;
+	margin: 5px;
+}
+input[type=submit],input[type=reset]
+ {
+	 width: 2cm;
+	 margin:1cm;
+	 border-radius: 10px;
+	 color: yellow;
+	 font-size: 20px;
+	 border-color: red;
+	 background-color: gray;
+ }
+ input[type=submit]:HOVER
+ {
+     background-color: green;
+     cursor: pointer;
+ }
+ input[type=reset]:HOVER
+ {
+   background-color: red;
+   cursor: crosshair;
+ }
+</style>
+</head>
+<body>
+<h1>log in please !!!</h1>
+<form action="./LoginController.abhi">
+enter username: <input type="text" name="unm" /><br>
+enter password :<input type="password" name="pass" /><br>
+   <input type="submit" value="log in" />
+   <input type="reset" value="clear" />
+</form>
+</body>
+</html>
