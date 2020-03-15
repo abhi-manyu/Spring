@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+   input {
+	padding: 5px;
+	margin: 5px;
+	font-size: 25px;
+}
+.login
+{
+text-align:center;
+  background-color:gray;
+  width: 10cm;
+  margin-left: 25%;
+  border-radius: 9px;
+}
+
+input[type=text],input[type=password]
+{
+   fontsize: 15px;
+   color: red;
+   background-color:#c4ff4d;
+   font-family: cursive;
+   text-align: center;
+}
+input[type=submit],input[type=reset]
+ {
+	 width: 2cm;
+	 margin:1cm;
+	 border-radius: 10px;
+	 color: yellow;
+	 font-size: 20px;
+	 border-color: red;
+	 background-color: gray;
+	 
+ }
+ input[type=submit]:HOVER
+ {
+     background-color: green;
+     cursor: pointer;
+ }
+ input[type=reset]:HOVER
+ {
+   background-color: red;
+   cursor: crosshair;
+ }
+</style>
+</head>
+<body bgcolor="blue">
+<div class="login">
+<h1 style="color: yellow;">log in please !!!</h1>
+<form action="./LoginController.abhi">
+enter username: <input type="text" name="unm" /><br>
+enter password :<input type="password" name="pass" /><br>
+   <input type="submit" value="log in" />
+   <input type="reset" value="clear" />
+</form>
+</div>
+</body>
+</html>
