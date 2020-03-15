@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+   <bean id="col1" class="pojos.College">
+       <property name="clg_id" value="145423"/>
+       <property name="col_name" value="GEC" />
+       <property name="no_of_student" value="400" />
+   </bean>
+   <bean id="col2" class="pojos.College">
+       <property name="clg_id" value="21386"/>
+       <property name="col_name" value="GITA" />
+       <property name="no_of_student" value="600" />
+   </bean>
+   <bean id="col3" class="pojos.College">
+       <property name="clg_id" value="468872"/>
+       <property name="col_name" value="GUNPUR" />
+       <property name="no_of_student" value="900" />
+   </bean>
+   <bean id="col4" class="pojos.College">
+       <property name="clg_id" value="147963"/>
+       <property name="col_name" value="SILICON" />
+       <property name="no_of_student" value="1200" />
+   </bean>
+   <bean id="col5" class="pojos.College">
+       <property name="clg_id" value="5462138"/>
+       <property name="col_name" value="C.V RAMAN" />
+       <property name="no_of_student" value="850" />
+   </bean>
+   <bean id="col6" class="pojos.College">
+       <property name="clg_id" value="9654123"/>
+       <property name="col_name" value="KIIT" />
+       <property name="no_of_student" value="1500" />
+   </bean>
+   
+   <bean id="un1" class="pojos.University">
+      <property name="uni_id" value="41230258" />
+      <property name="uni_name" value="BPUT" />
+      <property name="no_of_clg" value="3" />
+       <property name="clglist">
+          <list>
+            <ref bean="col1"/>
+            <ref bean="col2"/>
+            <ref bean="col3"/>
+          </list>
+       </property>
+   </bean>
+   <bean id="un3" class="pojos.University">
+      <property name="uni_id" value="12395139" />
+      <property name="uni_name" value="KIIT" />
+      <property name="no_of_clg" value="1" />
+       <property name="clglist">
+          <list>
+            <ref bean="col6"/>
+          </list>
+       </property>
+   </bean>
+   <bean id="un2" class="pojos.University">
+      <property name="uni_id" value="45625879" />
+      <property name="uni_name" value="BURLA" />
+      <property name="no_of_clg" value="2" />
+       <property name="clglist">
+          <list>
+            <ref bean="col4"/>
+            <ref bean="col5"/>
+          </list>
+       </property>
+   </bean>
+</beans>
