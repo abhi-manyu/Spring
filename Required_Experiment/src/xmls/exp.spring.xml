@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+
+    <bean id="c1" class="pojos.Car">
+       <property name="name" value="tayota Fortuner" />
+       <property name="eng" ref="e1" />
+    </bean>
+    <bean id="e1" class="pojos.Engine">
+      <property name="model_year" value="2003"/>
+      <property name="eng_name" value="Rangerover engine"/>
+    </bean>
+    <bean id="e2" class="pojos.Engine">
+      <property name="model_year" value="2005"/>
+      <property name="eng_name" value="BMW I8 engine"/>
+    </bean> 
+</beans>
